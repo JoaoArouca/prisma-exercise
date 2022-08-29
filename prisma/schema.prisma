@@ -15,4 +15,15 @@ model User {
   email String @unique
   name String
   password String
+
+  @@map("users") // como a tabela vai ser chamada
+}
+
+model Products {
+  id Int @id @default(autoincrement())
+  name String
+  price Decimal 
+  barCode String @unique
+
+  @@map("products")
 }
